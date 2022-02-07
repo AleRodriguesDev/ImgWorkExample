@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ImgWorkExample">
         <activity
+            android:name=".Transferencia"
+            android:exported="false" />
+        <activity
+            android:name=".Poupanca"
+            android:exported="false" />
+        <activity
+            android:name=".Fatura"
+            android:exported="false" />
+        <activity
             android:name=".Saldo"
             android:exported="false" />
         <activity

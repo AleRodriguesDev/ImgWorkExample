@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageView imgSaldo;
+    private ImageView imgSaldo, imgPoupanca, imgTrasferencia, imgFatura;
 
 
     @Override
@@ -18,13 +18,39 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         imgSaldo = findViewById(R.id.img_saldo);
+        imgPoupanca = findViewById(R.id.img_poupanca);
+        imgTrasferencia = findViewById(R.id.img_transferencia);
+        imgFatura = findViewById(R.id.img_fatura);
 
         imgSaldo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent chamaSaldo = new Intent(MainActivity.this, Saldo.class);
                 startActivity(chamaSaldo);
+            }
+        });
+
+        imgPoupanca.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent chamaPoupanca = new Intent(MainActivity.this, Poupanca.class);
+                startActivity(chamaPoupanca);
+            }
+        });
+
+        imgTrasferencia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent chamaTransferencia = new Intent(MainActivity.this, Transferencia.class);
+                startActivity(chamaTransferencia);
+            }
+        });
+
+        imgFatura.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent chamaFatura = new Intent(MainActivity.this, Fatura.class);
+                startActivity(chamaFatura);
             }
         });
     }
